@@ -17,7 +17,11 @@
         margin-bottom:5px;
       }
 
-      #pg2 {
+      #pg1 {
+        display:block;
+      }
+
+      #pg2, #pg3, #pg4 {
         display:none;
       }
     </style>
@@ -55,7 +59,7 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(2)">Next</button>
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(1)">Next</button>
           </div>
         </div>
       </div>
@@ -66,20 +70,68 @@
             <p>Please take note and pick the number with the statement that applied to you <b>over the past week</b>.</p>
             <p>There are no right or wrong answer.</p>
             <ul>
-                <li>1 - Did not apply to me at all</li>
-                <li>2 - Applied to me to some degree, or some of the time</li>
-                <li>3 - Applied to me to a considerable degree or a good part of time</li>
-                <li>4 - Applied to me very much or most of the time</li>
+                <li>0 - Did not apply to me at all</li>
+                <li>1 - Applied to me to some degree, or some of the time</li>
+                <li>2 - Applied to me to a considerable degree or a good part of time</li>
+                <li>3 - Applied to me very much or most of the time</li>
             </ul>
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-6">
-            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(1)">Back</button>
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(2)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(2)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg3">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 1</p>
+            <p>I found it hard to wind down.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(3)">Back</button>
           </div>
           <div class="col-sm-6">
             <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(3)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg4">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 2</p>
+            <p>I was aware of dryness in my mouth.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(4)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(4)">Next</button>
           </div>
         </div>
       </div>
@@ -95,22 +147,24 @@
 
       function prevPage(x){
         var page = x;
-        if (x == 1){
-          var cpage = document.getElementById("pg2");
-          var npage = document.getElementById("pg1");
-          cpage.style.display = "none";
-          npage.style.display = "block";
-        }
+        var p = x-1;
+        var i = "pg" + x;
+        var j = "pg" + p;
+        var cpage = document.getElementById(i);
+        var npage = document.getElementById(j);
+        cpage.style.display = "none";
+        npage.style.display = "block";
       }
 
       function nextPage(x){
         var page = x;
-        if (x == 2){
-          var cpage = document.getElementById("pg1");
-          var npage = document.getElementById("pg2");
-          cpage.style.display = "none";
-          npage.style.display = "block";
-        }
+        var n = x+1;
+        var i = "pg" + x;
+        var j = "pg" + n;
+        var cpage = document.getElementById(i);
+        var npage = document.getElementById(j);
+        cpage.style.display = "none";
+        npage.style.display = "block";
       }
 
     </script>
