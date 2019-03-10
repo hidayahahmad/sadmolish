@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "0.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>SadMolish</name>
+
+  <description>
+      An application that aids in monitoring moods and suggesting activities to cope depression and anxiety.
+  </description>
+
+  <author href="https://www.twitter.com/kuromi_msia" email="kuromi.public@gmail.com">
+      Neville Q. James
+  </author>
+  <icon src = "icon.png"/>
+
+</widget>
