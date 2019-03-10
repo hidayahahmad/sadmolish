@@ -7,24 +7,36 @@
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>SadMolish</title>
+
+    <style type="text/css">
+      p {
+        text-align: justify;
+      }
+
+      .btn {
+        margin-bottom:5px;
+      }
+
+      #pg2 {
+        display:none;
+      }
+    </style>
   </head>
-  <body>
+  <body onload="firstLoad()">
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button type="button" name="button"><</button>
+      <a href="../index.html" style="color:black;">
+          <span class="glyphicon glyphicon-chevron-left">Back</span>
+      </a>
       Test
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="#slides" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#schedule" class="nav-link">Schedule</a></li>
-          <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
-          <li class="nav-item"><a href="#connect" class="nav-link">Connect</a></li>
-          <li class="nav-item"><a href="../" class="nav-link">Wordpress</a></li>
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Setting</a></li>
         </ul>
       </div>
     </nav>
@@ -33,7 +45,77 @@
 
     <div class="container">
 
+      <div class="container-fluid" id="pg1">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>This page will test the levels of your depression, anxiety and stress.</p>
+            <p>The test will be using the DASS test, and you will be required to answer the following questions.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(2)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg2">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Please take note and pick the number with the statement that applied to you <b>over the past week</b>.</p>
+            <p>There are no right or wrong answer.</p>
+            <ul>
+                <li>1 - Did not apply to me at all</li>
+                <li>2 - Applied to me to some degree, or some of the time</li>
+                <li>3 - Applied to me to a considerable degree or a good part of time</li>
+                <li>4 - Applied to me very much or most of the time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(1)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(3)">Next</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Own functions -->
+    <script>
+
+      function firstLoad(){
+        document.getElementById("pg2").style.display = "none";
+      }
+
+      function prevPage(x){
+        var page = x;
+        if (x == 1){
+          var cpage = document.getElementById("pg2");
+          var npage = document.getElementById("pg1");
+          cpage.style.display = "none";
+          npage.style.display = "block";
+        }
+      }
+
+      function nextPage(x){
+        var page = x;
+        if (x == 2){
+          var cpage = document.getElementById("pg1");
+          var npage = document.getElementById("pg2");
+          cpage.style.display = "none";
+          npage.style.display = "block";
+        }
+      }
+
+    </script>
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../jquery-3.3.1.slim.min.js"></script>
     <script src="../popper.min.js"></script>
