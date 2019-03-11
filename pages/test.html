@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
     <title>SadMolish</title>
 
     <style type="text/css">
@@ -14,14 +15,21 @@
       }
 
       .btn {
+        margin-bottom: 5px;
+      }
+
+      .btn-outline-secondary {
         margin-bottom:5px;
+        width:100px;
       }
 
       #pg1 {
         display:block;
       }
 
-      #pg2, #pg3, #pg4, #pg5, #pg6, #pg7, #pg8, #pg9, #pg10, #pg11 {
+      #pg2, #pg3, #pg4, #pg5, #pg6, #pg7, #pg8, #pg9, #pg10, #pg11,
+      #pg12, #pg13, #pg14, #pg15, #pg16, #pg17, #pg18, #pg19, #pg20,
+      #pg21, #pg22, #pg23 {
         display:none;
       }
     </style>
@@ -31,7 +39,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a href="../index.html" style="color:black;">
-          <button class = "btn btn-outline-secondary"><</button>
+          <button class = "btn btn-outline-primary"><</button>
       </a>
       Test
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -232,11 +240,370 @@
         </div>
       </div>
 
+      <div class="container-fluid" id="pg9">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 7</p>
+            <p>I experienced trembling (e.g. in the hands).</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(9)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(9)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg10">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 8</p>
+            <p>I felt that I was using a lot of nervous energy.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(10)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(10)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg11">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 9</p>
+            <p>I was worried about situations in which I might panic and make a fool of myself.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(11)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(11)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg12">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 10</p>
+            <p>I felt that I had nothing to look forward to.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(12)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(12)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg13">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 11</p>
+            <p>I found myself getting agitated.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(13)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(13)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg14">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 12</p>
+            <p>I found it difficult to relax.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(14)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(14)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg15">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 13</p>
+            <p>I felt down-hearted and blue.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(15)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(15)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg16">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 14</p>
+            <p>I was intolerant of anything that kept me from getting on with what I was doing.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(16)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(16)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg17">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 15</p>
+            <p>I felt I was close to panic.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(17)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(17)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg18">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 16</p>
+            <p>I was unable to become enthusiastic about anything.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(18)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(18)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg19">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 17</p>
+            <p>I felt I wasn’t worth much as a person.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(19)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(19)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg20">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 18</p>
+            <p>I felt that I was rather touchy.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(20)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(20)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg21">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 19</p>
+            <p>I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat).</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(21)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(21)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg22">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 20</p>
+            <p>I felt scared without any good reason.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(22)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="nextPage(22)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="pg23">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Question 21</p>
+            <p>I felt that life was meaningless.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">0</button>
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+              <button type="button" class="btn btn-primary">3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="prevPage(23)">Back</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" name="button" class="btn btn-outline-secondary" onclick="#">Submit</button>
+          </div>
+        </div>
+      </div>
 
     </div>
 
     <!-- Own functions -->
-    <script>
+    <script type = "text/javascript">
 
       function firstLoad(){
         document.getElementById("pg2").style.display = "none";
