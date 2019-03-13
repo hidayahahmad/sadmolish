@@ -10,6 +10,13 @@
     <title>SadMolish</title>
 
     <style type="text/css">
+      /*.container, .container-fluid {
+        padding:10px;
+        border: 1px solid black;
+      }*/
+      #date {
+        font-size:15px;
+      }
       .btn {
         position: relative;
         margin-left:auto;
@@ -19,7 +26,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="onLoad()">
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,37 +46,59 @@
     <br><br>
 
     <div class="container">
-
-      <div class="container-fluid" style="position:relative;">
-          <div class="row">
-            <div class="col-sm-6">
+          <div class="row text-center padding">
+            <div class="col-xs-12 padding mx-auto">
+              <p id="date"></p>
+            </div>
+          </div>
+          <div class="row text-center padding">
+            <div class="col-xs-12 padding mx-auto">
+              <p id="date2"></p>
+            </div>
+          </div>
+          <div class="row padding">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/test.html" class="btn btn-outline-secondary">Test</a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/history.html" class="btn btn-outline-secondary">History</a>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-sm-6">
+          <div class="row padding">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/diary.html" class="btn btn-outline-secondary">Diary</a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/activities.html" class="btn btn-outline-secondary">Activities</a>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-sm-6">
+          <div class="row padding">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/entertainment.html" class="btn btn-outline-secondary">Entertainment</a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mx-auto">
               <a href="pages/about.html" class="btn btn-outline-secondary">About</a>
             </div>
           </div>
-      </div>
     </div>
 
+    <!-- My script -->
+    <script type="text/javascript">
+
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1;
+      var yy = today.getFullYear();
+      var date = today.toDateString();
+
+      function onLoad(){
+        document.getElementById("date").innerHTML = date;
+        localStorage.setItem("today", date);
+        document.getElementById("date2").innerHTML = localStorage.getItem("today");
+      }
+    </script>
     <!-- Optional JavaScript -->
     <!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
