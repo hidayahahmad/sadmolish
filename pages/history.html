@@ -39,6 +39,7 @@
 
     <!--Actual content-->
     <div class="container padding">
+
       <div class="container-fluid">
         <div class="row padding" id="e1">
           <div class="col-sm-6 padding mx-auto">
@@ -48,16 +49,33 @@
             <p id="result"></p>
           </div>
         </div>
+        <div class="row padding">
+          <div class="col-sm-12 mx-auto">
+            <button class="btn btn-outline-secondary" onclick="clearAll()">Delete Records</button>
+          </div>
+        </div>
       </div>
+
     </div>
 
     <!-- My script -->
     <script type="text/javascript">
       function onLoad(){
+        var tempDir = System.getTempDirectory() ;
+        var fileWriter = new FileWriter(tempDir + "record.txt") ;
+        fileWriter.open() ;
+        fileWriter.writeLine("File written at : "+new Date()) ;
+        fileWriter.writeLine("Another line") ;
+        fileWriter.close() ;
+
+        var record = JSON.parse(localStorage.getItem("progRecord"));
         var date = localStorage.getItem("recordedDate");
         var result = localStorage.getItem(date);
-        document.getElementById("date").innerHTML = date;
-        document.getElementById("result").innerHTML = result;
+        document.getElementById("date").innerHTML = record;
+      }
+
+      function clearAll(){
+        localStorage.clear();
       }
     </script>
 

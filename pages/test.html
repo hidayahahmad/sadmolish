@@ -389,7 +389,8 @@
       function kekkaSave(){
         var a = document.getElementById("depression").innerHTML;
         var dateToSave = localStorage.getItem("today");
-        localStorage.setItem(dateToSave, a);
+        var progRecord = {date: dateToSave, status: a};
+        localStorage.setItem("progRecord", JSON.stringify(progRecord));
         localStorage.setItem("recordedDate", dateToSave);
         document.getElementById("saved").innerHTML = "Today's record saved!";
       }
