@@ -11,8 +11,22 @@
 
     <style type="text/css">
       #e1 {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      table {
+        padding: 5px;
+        border: 2px solid black;
+      }
+      th {
+        padding: 10px;
         border: 1px solid black;
-        border-radius: 10px;
+        border-bottom: 2px solid black;
+      }
+      td {
+        padding: 5px;
+        border: 1px solid black;
       }
     </style>
   </head>
@@ -42,11 +56,10 @@
 
       <div class="container-fluid">
         <div class="row padding" id="e1">
-          <div class="col-sm-6 padding mx-auto">
-            <p id="date"></p>
-          </div>
-          <div class="col-sm-6 padding mx-auto">
-            <p id="result"></p>
+          <div class="col-sm-12 padding mx-auto">
+            <table id="historytable" style ="width:100%;">
+              <tr><th>Date</th><th>Result</th></tr>
+            </table>
           </div>
         </div>
         <div class="row padding">
@@ -60,22 +73,33 @@
 
     <!-- My script -->
     <script type="text/javascript">
-      function onLoad(){
-        var tempDir = System.getTempDirectory() ;
-        var fileWriter = new FileWriter(tempDir + "record.txt") ;
-        fileWriter.open() ;
-        fileWriter.writeLine("File written at : "+new Date()) ;
-        fileWriter.writeLine("Another line") ;
-        fileWriter.close() ;
 
-        var record = JSON.parse(localStorage.getItem("progRecord"));
-        var date = localStorage.getItem("recordedDate");
-        var result = localStorage.getItem(date);
-        document.getElementById("date").innerHTML = record;
+      function onLoad(){
+        var storedValues = window.localStorage.historyTable ;
+        var list = document.querySelector("#historytable");
+        console.log(list);
+        var x = localStorage.getItem("myItems");
+        if (x == null){
+          x = "";
+        }
+        list.innerHTML += x;
+        console.log(list);
+        window.localStorage.historyTable = list.innerHTML;
+        var y = localStorage.getItem("historyTable");
+        console.log(y);
       }
 
       function clearAll(){
-        localStorage.clear();
+        var r = confirm("Do you want to delete the records?");
+        if (r){
+          localStorage.removeItem("historyTable");
+          localStorage.removeItem("myItems");
+          window.location.replace("history.html");
+        }
+        else if (!r){
+          
+        }
+
       }
     </script>
 

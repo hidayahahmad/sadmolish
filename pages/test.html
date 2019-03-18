@@ -290,7 +290,7 @@
         </div>
         <div class="row padding">
           <div class="col-xs-12 mx-auto">
-            <button type="button" name="button" class="btn btn-outline-secondary" onclick="kekkaSave()">Save</button>
+            <button id="kekka" type="button" name="button" class="btn btn-outline-secondary" onclick="kekkaSave()">Save</button>
             <p id="saved"></p>
           </div>
         </div>
@@ -353,6 +353,8 @@
         var npage = document.getElementById(j); //identify next page
         cpage.style.display = "none"; //hide current page
         npage.style.display = "block"; //display next page
+        var btn = document.getElementById("kekka");
+        btn.disabled = false;
       }
 
       function nyuurokuYomu(x,y){
@@ -387,12 +389,23 @@
       }
 
       function kekkaSave(){
+
         var a = document.getElementById("depression").innerHTML;
         var dateToSave = localStorage.getItem("today");
-        var progRecord = {date: dateToSave, status: a};
-        localStorage.setItem("progRecord", JSON.stringify(progRecord));
-        localStorage.setItem("recordedDate", dateToSave);
+        var storedScore = localStorage.getItem("myItems");
+        if (storedScore == null){
+          storedScore = "";
+        }
+        var list = "<tr><td>" + dateToSave + "</td><td>" + a +"</td></tr>";
+        storedScore = list + storedScore;
+        console.log( storedScore);
+        window.localStorage.myItems = storedScore;
+        x = localStorage.getItem("myItems");
+        console.log(storedScore);
         document.getElementById("saved").innerHTML = "Today's record saved!";
+        var btn = document.getElementById("kekka");
+        btn.disabled = true;
+
       }
 
 

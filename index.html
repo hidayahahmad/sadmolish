@@ -18,10 +18,7 @@
         font-size:15px;
       }
       .btn {
-        position: relative;
-        margin-left:auto;
-        margin-right:auto;
-        width: 200px;
+        width: 150px;
         margin-bottom:10px;
       }
     </style>
@@ -31,7 +28,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <img src = "icon.png" style="width:50px;height:50px;">
-      SadMolish
+      <p>SadMolish</p>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,13 +45,8 @@
     <div class="container">
           <div class="row text-center padding">
             <div class="col-xs-12 padding mx-auto">
-              <p id="date"></p>
-              <!--<a class="btn btn-outline-primary" href="login.html">Login</a>-->
-            </div>
-          </div>
-          <div class="row text-center padding">
-            <div class="col-xs-12 padding mx-auto">
               <p id="date2"></p>
+              <!--<a class="btn btn-outline-primary" href="login.html">Login</a>-->
             </div>
           </div>
           <div class="row padding">
@@ -95,8 +87,6 @@
       var date = today.toDateString();
 
       function onLoad(){
-        document.getElementById("date").innerHTML = date;
-        localStorage.setItem("today", date);
         document.getElementById("date2").innerHTML = localStorage.getItem("today");
       }
     </script>
